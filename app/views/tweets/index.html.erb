@@ -1,0 +1,14 @@
+<h1>Twitter</h1>
+<%= flash[:notice] %>
+<p></p>
+<p><%= link_to 'tweet', '/tweets/new' %></p>
+<% @tweets.each do |tweet| %>
+<p>
+<p>
+<%= tweet.message %>
+</p>
+<%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %>
+<%= link_to '表示', "/tweets/#{tweet.id}" %>
+<%= link_to '編集', "/tweets/#{tweet.id}/edit" %>
+</p>
+<% end %>

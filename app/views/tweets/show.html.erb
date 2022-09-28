@@ -1,0 +1,9 @@
+<p>
+    <strong>本文:</strong>
+    <%= @tweets.message %>
+</p>
+<p>
+    <%= ((Time.current)- (@tweets.tdate)).div(60).to_s %>
+    <strong>分前</strong>
+</p>
+<%= link_to 'Back', '/' %>

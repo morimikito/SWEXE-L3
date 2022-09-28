@@ -1,0 +1,8 @@
+<%= flash[:blankalert] %>
+
+<%= form_for @tweets , url: {action: :update} do |f| %>
+<%= f.label :message, '本文' %>
+<%= f.text_field :message %>
+
+<%= f.submit '更新してツイート' %>
+<% end %>
